@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: 'actual error' });
         return;
       }
       res.json(dbUserData);
@@ -55,7 +55,7 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      res.status(400).json({ message: 'actual error' });
       return;
     }
 
